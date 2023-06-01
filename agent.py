@@ -1,3 +1,4 @@
+import os
 import pickle
 
 
@@ -7,17 +8,16 @@ class Boxer:
     """
 
     def __init__(self, q_table_path: str) -> None:
-        self.q_table = pickle.load(q_table_path)
+        self.q_table = None
+        if q_table_path is not None and os.path.exists(q_table_path):
+            self.q_table = pickle.load(q_table_path)
 
-    def train(self, resume: bool = False) -> None:
-        """
-        Train boxer
-        inputs:
-            resume: to resume training, load Q-table and continue training.
-        """
-        pass
+    def take_action(self, observation, reward, info):
+        raise Exception("This method os not imlemented")
 
-    def fight(self) -> None:
-        """ Start to fight
-        """
-        pass
+
+class RandomBoxer(Boxer):
+    def take_action(self, observation, reward, info, action_space):
+        return action_space.sample()
+
+
