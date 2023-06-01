@@ -21,3 +21,11 @@ class RandomBoxer(Boxer):
         return action_space.sample()
 
 
+class TrainingBoxer(Boxer):
+    def __init__(self, q_table_path: str, resume: bool = False) -> None:
+        super().__init__(q_table_path)
+        self.resume = resume
+
+
+class FighterBoxer(Boxer):
+    pass
