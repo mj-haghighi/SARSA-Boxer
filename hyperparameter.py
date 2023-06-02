@@ -1,8 +1,8 @@
 class Hyperparameters:
     def __init__(self, gamma, alpha, epsilon) -> None:
-        self.epsilon = Hyperparameter(value=1, decayrate=0.00007)
-        self.alpha = Hyperparameter(value=0.8, decayrate=0.00005)
-        self.gamma = Hyperparameter(value=0.9, decayrate=0.0001)
+        self.epsilon = Hyperparameter(value=epsilon, decayrate=0.0007)
+        self.alpha = Hyperparameter(value=alpha, decayrate=0.0005)
+        self.gamma = Hyperparameter(value=gamma, decayrate=0.0001)
 
     def decay_epsilon(self):
         self.epsilon.value = max(0.1, self.epsilon.value - self.epsilon.decayrate)
