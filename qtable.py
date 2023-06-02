@@ -7,7 +7,10 @@ class QTable:
     def __init__(self, path, num_available_actions: int = None) -> None:
         self.table = {}
         if path is not None and os.path.exists(path):
-            self.table = pickle.load(path)
+            with open(path, 'rb') as fp:
+                self.table = pickle.load(fp).table
+                print("Table loaded!")
+            
         self.num_available_actions = num_available_actions
 
     def mine(self, state):
