@@ -3,15 +3,16 @@ import gymnasium as gym
 from agent import Boxer
 
 class Game:
-    def __init__(self, boxer: Boxer) -> None:
+    def __init__(self, boxer: Boxer, start_episode=0) -> None:
         self.env = gym.make("ALE/Boxing-v5")
         self.boxer = boxer
         self.boxer.action_space = self.env.action_space
+        self.start_episode = start_episode
 
-    def start(self, episods=2000):
+    def start(self, episods=3000):
         observation, info = self.env.reset(seed=42)
         reward_history = []
-        for e in range(episods):
+        for e in range(self.start_episode, episods, 1):
             terminated, truncated = False, False
             observation, info = self.env.reset()
             total_reward = 0
