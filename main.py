@@ -22,5 +22,5 @@ if __name__ == "__main__":
     else:
         raise Exception('train or fight? use one of `--train` `--fight`')
 
-    game = Game(boxer=boxer)
+    game = Game(boxer=boxer, start_episode=args.start_episode)
     game.start()
