@@ -13,6 +13,7 @@ def get_args():
     parser.add_argument('--gamma', type=float, default=0.9, help='gamma | hyper parameter')
     parser.add_argument('--alpha', type=float, default=0.8, help='learning rate')
     parser.add_argument('--epsilon', type=float, default=1.0, help='epsilon gready')
+    parser.add_argument('--start_episode', type=int, help='start from episode "start_episode", use when resuming training process')
 
     # Parse the arguments
     args = parser.parse_args()
