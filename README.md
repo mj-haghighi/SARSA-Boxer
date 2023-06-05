@@ -7,8 +7,7 @@ This GitHub repository provides an implementation of the Sarsa algorithm for tra
 
 By working on a Reinforcement Learning (RL) project using the SARSA algorithm to train a boxer agent from the Gymnasym AI library, I have likely gained valuable insights and experiences. Throughout this project, I would have learned the intricacies of implementing SARSA, a temporal-difference RL algorithm, to enable the agent to learn and improve its boxing skills iteratively. By observing the agent's interactions with the environment and evaluating its actions based on the anticipated rewards, I would have developed a deep understanding of the agent's decision-making process. This project would have provided me with hands-on experience in RL, enabling me to explore the challenges and opportunities involved in training an agent to excel in a specific task, ultimately enhancing my skills in RL algorithms and their applications.
 
-![Reward Plot]([/plots/reward-plots.png](https://github.com/mj-haghighi/SARSA-Boxer/blob/main/plots/reward-plot.png)")
-
+![Reward Plot](https://github.com/mj-haghighi/SARSA-Boxer/blob/main/plots/reward-plot.png)
 
 ## Run Locally
 
